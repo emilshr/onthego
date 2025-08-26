@@ -5,13 +5,21 @@ import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 import type { Header } from '@/payload-types'
+import { Comforter_Brush } from 'next/font/google'
 
 import { Logo } from '@/components/Logo/Logo'
 import { HeaderNav } from './Nav'
+import { cn } from '@/utilities/ui'
 
 interface HeaderClientProps {
   data: Header
 }
+
+const comforterBrush = Comforter_Brush({
+  subsets: ['latin'],
+  weight: ['400'],
+  preload: true,
+})
 
 export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   /* Storing the value in a useState to avoid hydration errors */
@@ -31,9 +39,10 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
 
   return (
     <header className="container relative z-20   " {...(theme ? { 'data-theme': theme } : {})}>
-      <div className="py-8 flex justify-between">
+      <div className="py-8 flex justify-between items-center">
         <Link href="/">
-          <Logo loading="eager" priority="high" className="invert dark:invert-0" />
+          {/* <Logo loading="eager" priority="high" className="invert dark:invert-0" /> */}
+          <h1 className={cn(comforterBrush.className, 'text-3xl font-bold')}>onthego</h1>
         </Link>
         <HeaderNav data={data} />
       </div>
