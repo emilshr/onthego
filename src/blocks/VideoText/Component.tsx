@@ -9,7 +9,6 @@ const fugazOne = Fugaz_One({
 })
 
 export const VideoTextBlock: React.FC<VideoTextBlockProps> = ({ text, uploadedUrl }) => {
-  console.log('fugazOne fontFamily:', fugazOne.style.fontFamily)
   if (typeof uploadedUrl === 'object' && uploadedUrl.url) {
     return (
       <div className="relative w-full overflow-hidden">

@@ -12,8 +12,6 @@ export const Media: React.FC<Props> = (props) => {
     typeof resource === 'object' && resource?.mimeType?.toLowerCase().includes('video')
   const Tag = htmlElement || Fragment
 
-  console.log({ isVideo })
-
   return (
     <Tag
       {...(htmlElement !== null
