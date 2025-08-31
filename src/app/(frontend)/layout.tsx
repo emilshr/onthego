@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import { cn } from '@/utilities/ui'
-import { PT_Serif } from 'next/font/google'
+import { PT_Serif, STIX_Two_Text } from 'next/font/google'
 import React from 'react'
 
 import { AdminBar } from '@/components/AdminBar'
@@ -21,11 +21,16 @@ const ptSerif = PT_Serif({
   preload: true,
 })
 
+const stixTwoText = STIX_Two_Text({
+  subsets: ['latin'],
+  preload: true,
+})
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
 
   return (
-    <html className={cn(ptSerif.className)} lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />

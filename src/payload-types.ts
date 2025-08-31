@@ -191,7 +191,7 @@ export interface Page {
       | null;
     media?: (string | null) | Media;
   };
-  layout: (CallToActionBlock | ContentBlock | MediaBlock | ArchiveBlock | FormBlock)[];
+  layout: (CallToActionBlock | ContentBlock | MediaBlock | ArchiveBlock | FormBlock | VideoTextBlock)[];
   meta?: {
     title?: string | null;
     /**
@@ -736,6 +736,17 @@ export interface Form {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "VideoTextBlock".
+ */
+export interface VideoTextBlock {
+  videoUrl: string;
+  text: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'videoText';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -1025,6 +1036,7 @@ export interface PagesSelect<T extends boolean = true> {
         mediaBlock?: T | MediaBlockSelect<T>;
         archive?: T | ArchiveBlockSelect<T>;
         formBlock?: T | FormBlockSelect<T>;
+        videoText?: T | VideoTextBlockSelect<T>;
       };
   meta?:
     | T
@@ -1121,6 +1133,16 @@ export interface FormBlockSelect<T extends boolean = true> {
   form?: T;
   enableIntro?: T;
   introContent?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "VideoTextBlock_select".
+ */
+export interface VideoTextBlockSelect<T extends boolean = true> {
+  videoUrl?: T;
+  text?: T;
   id?: T;
   blockName?: T;
 }

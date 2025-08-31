@@ -42,7 +42,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
       <div className="py-8 flex justify-between items-center">
         <Link href="/">
           {/* <Logo loading="eager" priority="high" className="invert dark:invert-0" /> */}
-          <h1 className={cn(comforterBrush.className, 'text-3xl font-bold')}>onthego</h1>
+          <h1 className={cn(comforterBrush.className, 'text-3xl font-bold text-white')}>onthego</h1>
         </Link>
         <HeaderNav data={data} />
       </div>

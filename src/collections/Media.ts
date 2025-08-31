@@ -76,5 +76,11 @@ export const Media: CollectionConfig = {
         crop: 'center',
       },
     ],
+    formatOptions: {
+      format: 'jpeg',
+      options: {
+        quality: 80,
+      },
+    },
   },
 }
