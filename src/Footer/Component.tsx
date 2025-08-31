@@ -32,7 +32,7 @@ export async function Footer() {
           <ThemeSelector />
           <nav className="flex flex-col md:flex-row gap-4">
             {navItems.map(({ link }, i) => {
-              return <CMSLink className="text-white" key={i} {...link} appearance="default" />
+              return <CMSLink key={i} {...link} appearance="link" />
             })}
           </nav>
         </div>
