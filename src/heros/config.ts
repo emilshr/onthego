@@ -8,6 +8,7 @@ import {
 } from '@payloadcms/richtext-lexical'
 
 import { linkGroup } from '@/fields/linkGroup'
+import { VideoText } from '@/blocks/VideoText/config'
 
 export const hero: Field = {
   name: 'hero',
@@ -36,6 +37,13 @@ export const hero: Field = {
           value: 'lowImpact',
         },
       ],
+      required: true,
+    },
+    {
+      name: 'heroText',
+      type: 'blocks',
+      blocks: [VideoText],
+      label: 'Hero Text',
       required: true,
     },
     {

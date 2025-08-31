@@ -5,14 +5,14 @@ export const VideoText: Block = {
   interfaceName: 'VideoTextBlock',
   fields: [
     {
-      name: 'videoUrl',
-      type: 'text',
-      label: 'Video URL',
+      name: 'uploadedUrl',
+      type: 'upload',
+      relationTo: 'media',
       required: true,
     },
     {
       name: 'text',
-      type: 'text',
+      type: 'textarea',
       label: 'Text',
       required: true,
     },

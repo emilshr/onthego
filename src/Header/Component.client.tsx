@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react'
 import type { Header } from '@/payload-types'
 import { Comforter_Brush } from 'next/font/google'
 
-import { Logo } from '@/components/Logo/Logo'
 import { HeaderNav } from './Nav'
 import { cn } from '@/utilities/ui'
 

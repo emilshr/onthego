@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 
-import { cn } from '@/utilities/ui'
-import { PT_Serif, STIX_Two_Text } from 'next/font/google'
 import React from 'react'
 
 import { AdminBar } from '@/components/AdminBar'
@@ -14,17 +12,6 @@ import { draftMode } from 'next/headers'
 
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
-
-const ptSerif = PT_Serif({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  preload: true,
-})
-
-const stixTwoText = STIX_Two_Text({
-  subsets: ['latin'],
-  preload: true,
-})
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
