@@ -15,7 +15,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ heroText }) => {
 
   return (
     <div className="flex text-white" data-theme="dark">
-      {heroText && <VideoTextBlock {...heroText[0]} />}
+      {heroText && heroText.map((arg) => <VideoTextBlock {...arg} key={arg.id} />)}
     </div>
   )
 }

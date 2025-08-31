@@ -44,7 +44,6 @@ export const hero: Field = {
       type: 'blocks',
       blocks: [VideoText],
       label: 'Hero Text',
-      required: true,
     },
     {
       name: 'richText',

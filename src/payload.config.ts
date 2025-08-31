@@ -68,9 +68,9 @@ export default buildConfig({
   editor: defaultLexical,
   db: mongooseAdapter({
     url: process.env.MONGODB_URI || '',
-    connectOptions: {
-      ssl: process.env.NODE_ENV === 'production',
-    },
+    // connectOptions: {
+    //   ssl: process.env.NODE_ENV === 'production',
+    // },
   }),
   collections: [Pages, Posts, Media, Categories, Users],
   cors: [getServerSideURL()].filter(Boolean),

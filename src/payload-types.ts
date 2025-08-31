@@ -150,7 +150,7 @@ export interface Page {
   title: string;
   hero: {
     type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
-    heroText: VideoTextBlock[];
+    heroText?: VideoTextBlock[] | null;
     richText?: {
       root: {
         type: string;
