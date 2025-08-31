@@ -120,7 +120,7 @@ export function VideoText({
         const width = window.innerWidth
         if (width < 640) {
           // sm - mobile
-          baseSize = baseSize * 1.2
+          baseSize = baseSize * 1.4
         } else if (width < 768) {
           // md - small tablet
           baseSize = baseSize * 1.1
