@@ -88,6 +88,7 @@ export default buildConfig({
           secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || '',
         },
       },
+      clientUploads: true,
       collections: {
         media: true,
       },
