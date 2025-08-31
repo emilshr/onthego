@@ -59,14 +59,17 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 }
 
 const ImageComponent = ({ card }: { card: Card }) => {
+  if (card.thumbnail === '') {
+    return null
+  }
   return (
     <motion.img
       layoutId={`image-${card.id}-image`}
       src={card.thumbnail}
-      height="500"
-      width="500"
+      height="100%"
+      width="100%"
       className={cn(
-        'object-cover object-top absolute inset-0 h-full w-full transition duration-200',
+        'object-cover object-top absolute inset-0 h-full w-full transition duration-200 !my-0',
       )}
       alt="thumbnail"
     />
