@@ -59,19 +59,30 @@ type Props = {
   data: DefaultTypedEditorState
   enableGutter?: boolean
   enableProse?: boolean
+  textAlign?: 'left' | 'center' | 'right' | 'justify'
 } & React.HTMLAttributes<HTMLDivElement>
 
 export default function RichText(props: Props) {
-  const { className, enableProse = true, enableGutter = true, ...rest } = props
+  const {
+    className,
+    enableProse = true,
+    enableGutter = true,
+    textAlign = 'center',
+    ...rest
+  } = props
   return (
     <ConvertRichText
       converters={jsxConverters}
       className={cn(
-        'payload-richtext text-justify',
+        'payload-richtext',
         {
           container: enableGutter,
           'max-w-none': !enableGutter,
           'mx-auto prose md:prose-md dark:prose-invert': enableProse,
+          'text-left': textAlign === 'left',
+          'text-center': textAlign === 'center',
+          'text-right': textAlign === 'right',
+          'text-justify': textAlign === 'justify',
         },
         className,
       )}

@@ -17,7 +17,7 @@ export const VideoTextBlock: React.FC<VideoTextBlockProps> = ({ text, uploadedUr
           fontFamily="Fugaz One"
           src={uploadedUrl.url}
           className={fugazOne.className}
-          fontSize={23}
+          fontSize={25}
         >
           {text}
         </VideoText>
