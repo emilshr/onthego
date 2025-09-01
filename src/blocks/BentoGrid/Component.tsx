@@ -36,6 +36,7 @@ export const BentoGridBlock = (props: BentoGridBlockProps) => {
           content: <Skeleton title={item.title || ''} description={item.description || ''} />,
           className: gridClassMap[index % 4],
           thumbnail: typeof item.image === 'object' ? item.image?.url || '' : item.image || '',
+          media: typeof item.image === 'object' ? item.image : null,
         }
       })
     }

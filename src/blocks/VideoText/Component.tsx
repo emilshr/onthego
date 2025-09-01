@@ -18,6 +18,10 @@ export const VideoTextBlock: React.FC<VideoTextBlockProps> = ({ text, uploadedUr
           src={uploadedUrl.url}
           className={fugazOne.className}
           fontSize={25}
+          preload="auto"
+          loop
+          autoPlay
+          muted
         >
           {text}
         </VideoText>
