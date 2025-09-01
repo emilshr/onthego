@@ -55,9 +55,3 @@ export default async function Page() {
     </div>
   )
 }
-
-export function generateMetadata(): Metadata {
-  return {
-    title: `Payload Website Template Posts`,
-  }
-}

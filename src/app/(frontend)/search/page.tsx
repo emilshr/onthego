@@ -80,9 +80,3 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
     </div>
   )
 }
-
-export function generateMetadata(): Metadata {
-  return {
-    title: `Payload Website Template Search`,
-  }
-}
